@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 07 Haz 2023, 09:02:16
+-- Üretim Zamanı: 07 Haz 2023, 09:10:45
 -- Sunucu sürümü: 10.4.28-MariaDB
 -- PHP Sürümü: 8.2.4
 
@@ -45,6 +45,27 @@ INSERT INTO `kullanici` (`id`, `ad`, `soyad`) VALUES
 (5, 'asda', 'asda'),
 (6, 'asda', 'asda');
 
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `yazi`
+--
+
+CREATE TABLE `yazi` (
+  `id` int(11) NOT NULL,
+  `baslik` varchar(50) NOT NULL,
+  `icerik` text NOT NULL,
+  `kullanici_id` int(11) NOT NULL,
+  `zaman` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `yazi`
+--
+
+INSERT INTO `yazi` (`id`, `baslik`, `icerik`, `kullanici_id`, `zaman`) VALUES
+(5, 'test', '', 0, '0000-00-00 00:00:00');
+
 --
 -- Dökümü yapılmış tablolar için indeksler
 --
@@ -56,6 +77,12 @@ ALTER TABLE `kullanici`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Tablo için indeksler `yazi`
+--
+ALTER TABLE `yazi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
 --
 
@@ -64,6 +91,12 @@ ALTER TABLE `kullanici`
 --
 ALTER TABLE `kullanici`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `yazi`
+--
+ALTER TABLE `yazi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

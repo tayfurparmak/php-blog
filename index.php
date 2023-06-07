@@ -31,7 +31,7 @@ require_once("yazidb.php"); ?>
         <a class="nav-link" href="yazi_listele.php">kullanıcı</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#">yazar</a>
+        <a class="nav-link" href="admin.php">yazar</a>
       </li>
       
     </ul>

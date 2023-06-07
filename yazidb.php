@@ -35,7 +35,7 @@ function Update($id, $baslik, $icerik, $kullanici_id, $zaman)
 function GetAll()
 {
   global $conn;
-  $sql = "SELECT id, baslik, icerik, kullanici_id,zaman FROM yazi";
+  $sql = "SELECT id, baslik, icerik, kullanici_id, zaman FROM yazi";
   $result = $conn->query($sql);
   return $result;
 }
@@ -43,7 +43,7 @@ function GetAll()
 function Get($id)
 {
   global $conn;
-  $sql = "SELECT id, baslik, icerik,kullanici_id,zaman FROM yazi WHERE id = '$id'";
+  $sql = "SELECT id, baslik, icerik,kullanici_id, zaman FROM yazi WHERE id = '$id'";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {

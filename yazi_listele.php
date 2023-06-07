@@ -1,3 +1,6 @@
+<?php 
+require_once("index.php"); ?>
+
 <div class="card mb-1">
   <div class="card-header">Kayıtlar</div>
   <div class="card-body p-0">

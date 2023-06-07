@@ -1,4 +1,4 @@
-<?php require_once("kullanicidb.php");
+<?php 
 require_once("yazidb.php"); ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ require_once("yazidb.php"); ?>
   <div class="container p-3">
     <?php
     if ($_POST && isset($_POST["add"])) {
-      Add($_POST["baslik"], $_POST["icerik"]);
+      Add($_POST["baslik"], $_POST["icerik"],$_POST["kullanici_id"],$_POST["zaman"]);
       echo "<div class='alert alert-primary'>Kayıt başarılı!</div>";
     }
 
@@ -32,7 +32,7 @@ require_once("yazidb.php"); ?>
     }
 
     if ($_POST && isset($_POST["duzenleKaydetId"])) {
-      Update($_POST["duzenleKaydetId"], $_POST["baslik"], $_POST["icerik"]);
+      Update($_POST["duzenleKaydetId"], $_POST["baslik"], $_POST["icerik"],$_POST["kullanici_id"], $_POST["zaman"]);
       echo "<div class='alert alert-primary'>Kayıt başarılı!</div>";
     }
     ?>

@@ -11,6 +11,15 @@
         <label class="form-label">İçerik</label>
         <textarea class="form-control" name="icerik" rows="3"></textarea>
       </div>
+      <div class="mb-3">
+        <label class="form-label">kullanici_id</label>
+        <input type="text" name="kullanici_id" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">zaman = </label>
+        <?php echo date("d M Y H:i:s"); ?>
+       
+      </div>
       <div class="text-end">
         <input type="submit" value="Kaydet" class="btn btn-success" />
       </div>

@@ -7,7 +7,9 @@
           <th>#</th>
           <th>Başlık</th>
           <th>İçerik</th>
-          <th class="text-end">İşlemler</th>
+          <th>kullanici_id</th>
+          <th>zaman</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -20,6 +22,8 @@
               <td><?php echo $row["id"]; ?></td>
               <td><?php echo $row["baslik"]; ?></td>
               <td><?php echo $row["icerik"]; ?></td>
+              <td><?php echo $row["kullanici_id"]; ?></td>
+              <td><?php echo $row["zaman"]; ?></td>
               <td class="text-end">
                 <a class="btn btn-primary" href="?duzenleId=<?php echo $row["id"]; ?>">
                   Düzenle
